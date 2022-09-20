@@ -1,0 +1,12 @@
+
+train_input[0:1].reshape(-1, 28, 28, 1) / 255.0
+model = keras.Model(model.input, model.layers[1].output)
+model.layers[1].weights[0] = input data weight
+feature_map = model.predict(input)
+feature_map.shape == 1, 28, 28, 32
+1개의 배치와 32개의 필터, 그리고 패딩을 사용하지 않아 입력 데이터와 같은 차원으로 출력됨.
+
+
+
+
+
